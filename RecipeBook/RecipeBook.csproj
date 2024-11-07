@@ -32,22 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\BepInEx\core\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass_publicized">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\publicized_assemblies\Assembly-CSharp-firstpass_publicized.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\publicized_assemblies\Assembly-CSharp-firstpass_publicized.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp_publicized">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\publicized_assemblies\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="CasperEquinoxGUI">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\plugins\CasperEquinoxGUI\CasperEquinoxGUI.dll</HintPath>
     </Reference>
     <Reference Include="EquinoxsModUtils">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\BepInEx\plugins\EquinoxsModUtils\EquinoxsModUtils.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\plugins\EquinoxsModUtils\EquinoxsModUtils.dll</HintPath>
     </Reference>
     <Reference Include="Rewired_Core">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\Rewired_Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\Rewired_Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,56 +61,48 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\RecipePanel.cs" />
+    <Compile Include="Images.cs" />
+    <Compile Include="Patches\InventoryAndCraftingUI.cs" />
+    <Compile Include="ItemsPanelGUI.cs" />
     <Compile Include="RecipeBookPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipesGUI.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Patches\" />
+    <EmbeddedResource Include="Images\OneToOne.png" />
+    <EmbeddedResource Include="Images\OneToThree.png" />
+    <EmbeddedResource Include="Images\OneToTwo.png" />
+    <EmbeddedResource Include="Images\TwoToOne.png" />
+    <EmbeddedResource Include="Images\TwoToThree.png" />
+    <EmbeddedResource Include="Images\TwoToTwo.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\ButtonBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\ButtonHoverBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\TextBoxHover.png" />
-    <EmbeddedResource Include="Images\TextBoxNormal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\WindowBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\OneIngredient.png" />
-    <EmbeddedResource Include="Images\ThreeIngredients.png" />
-    <EmbeddedResource Include="Images\ThresherRecipe.png" />
-    <EmbeddedResource Include="Images\TwoIngredients.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\CheckboxTicked.png" />
-    <EmbeddedResource Include="Images\CheckboxUnTicked.png" />
+    <EmbeddedResource Include="Images\ThreeToOne.png" />
+    <EmbeddedResource Include="Images\ThreeToThree.png" />
+    <EmbeddedResource Include="Images\ThreeToTwo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir "C:\SteamLibrary\steamapps\common\Techtonica\BepInEx\plugins\$(TargetName)"
-xcopy /q/y/i "$(TargetPath)" "C:\SteamLibrary\steamapps\common\Techtonica\BepInEx\plugins\$(TargetName)" /E /H /C</PostBuildEvent>
+    <PostBuildEvent>mkdir "C:\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\plugins\$(TargetName)"
+xcopy /q/y/i "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\Techtonica\BepInEx\plugins\$(TargetName)" /E /H /C</PostBuildEvent>
   </PropertyGroup>
 </Project>
